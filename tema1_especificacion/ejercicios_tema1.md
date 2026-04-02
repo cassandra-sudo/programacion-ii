@@ -11,7 +11,7 @@ Es una pregunta técnica e interna — el código contra su contrato.
 Es una pregunta de negocio y contexto — el sistema contra el mundo real.
 
 **Ejemplo de error de verificación:**
-Una función `calcularSaldo()` está especificada para retornar un `double` con dos decimales de precisión. La implementación retorna un `int` y trunca los centavos. El código no cumple su propia especificación — eso es un error de verificación.
+Una función `Balance()` está especificada para retornar un `double` con dos decimales de precisión. La implementación retorna un `int` y trunca los centavos. El código no cumple su propia especificación — eso es un error de verificación.
 
 **Ejemplo de error de validación:**
 El sistema calcula el saldo correctamente según su especificación. Pero la especificación nunca modeló las comisiones bancarias por retiro. El programa es técnicamente correcto pero no resuelve el problema real del banco — eso es un error de validación.
