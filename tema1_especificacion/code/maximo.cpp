@@ -9,7 +9,7 @@ int maximo(const std::vector<int>& list) {
     int mayor = list[0];    // el primero es provisionalmente el mayor
 
     for (size_t i = 1; i < list.size(); ++i) {
-        if (list[i] > mayor) {  // si alguno en la lista es mayor al primero, o al que lo sustituyo
+        if (list[i] > mayor) {  // alguno en la lista es mayor a sus antecesores
             mayor = list[i];  // declaro al encontrado como mayor
         }
     }
