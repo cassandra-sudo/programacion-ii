@@ -122,6 +122,9 @@ Una **lista ligada** es una secuencia de nodos donde cada nodo contiene un valor
 ### Implementación
 
 ```cpp
+#include<iostream>
+#include<stdexcept>
+
 template <typename T>
 class LinkedList {
 private:
