@@ -130,6 +130,7 @@ private:
         Node* next;
         Node(T d) : data(d), next(nullptr) {}
     };
+
     Node* head;
     int currentSize;
 
@@ -137,12 +138,12 @@ public:
     LinkedList() : head(nullptr), currentSize(0) {}
 
     ~LinkedList() {
-        while (!isEmpty()) pop_front();
+        while (!isEmpty()) pop_front(); // Libera todos los nodos
     }
 
     void push_front(T value) {
         Node* newNode = new Node(value);
-        newNode->next = head;
+        newNode->next = head; // El nuevo nodo apunta al anterior head
         head = newNode;
         currentSize++;
     }
@@ -152,7 +153,7 @@ public:
         Node* temp = head;
         T value = temp->data;
         head = head->next;
-        delete temp;
+        delete temp; // Evita memory leak
         currentSize--;
         return value;
     }
